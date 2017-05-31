@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" type="text/css" href="lib/normalize.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <title>Scrat Template Project</title>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>我的第一个 Scrat Demo</title>
 </head>
 <body>
-  <script src="lib/scrat.js"></script>
-  <script>
+    <div id="main"></div>
+    <script src="js/scrat.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
     require.config(__FRAMEWORK_CONFIG__);
-    require.async('boot', function (boot) { boot() });
-  </script>
+    require.async('boot', function (boot) {
+        boot.init('#main');
+    });
+    </script>
 </body>
 </html>
